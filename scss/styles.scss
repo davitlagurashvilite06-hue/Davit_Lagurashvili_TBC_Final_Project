@@ -3,7 +3,7 @@ $dark-green: darken($primary-green, 20%);
 
 @mixin leaf-style {
     background-color: $primary-green;
-    border-radius: 100% 0% 52% 48% / 47% 0% 100% 53%;
+    border-radius: 55%;
     transition: all 0.3s ease;
     
     &:hover {
@@ -12,9 +12,12 @@ $dark-green: darken($primary-green, 20%);
     }
 }
 
+body {
+    background-color: #afd5af;
+}
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100px;
     background: #5bbb86;
@@ -24,6 +27,9 @@ nav {
         rgb(93, 184, 130) 73%,
         rgb(109, 160, 97) 95%
     );
+    margin-bottom: 30px;
+    padding: 20px;
+
 
     ul {
         display: flex;
@@ -31,15 +37,11 @@ nav {
         justify-content: space-around;
         gap: 25px;
         padding: 0;
-        width: 100%;
+        width: 72%;
 
         li {
             display: flex;
-            align-items: center;
-
-            &:not(.logo-item) {
-                @include leaf-style;
-            }
+            align-items: center;           
 
             a {
                 text-decoration: none !important;
@@ -47,15 +49,18 @@ nav {
                 font-weight: 600;
                 padding: 12px 25px;
                 display: block;
-
-                img {
-                    width: 110px;
-                    height: 30px;
+                @include leaf-style;                
+                
+                @media (min-width: 1200px) {
+                    & {
+                        font-size: 23px;
+                    }
                 }
                 
                 &.selected {
                     background-color: $dark-green;
-                    border-radius: 51% 49% 50% 50% / 53% 0% 100% 47%;
+                    border-radius: 46% 54% 81% 19% / 85% 7% 93% 15% ;
+                    pointer-events: none;
                     
                     &:hover {
                         transform: none;
@@ -65,6 +70,11 @@ nav {
         }
     }
 
+            img {
+                    width: 110px;
+                    height: 30px;
+                }
+
     ul li a,
     ul li a:hover,
     ul li a:focus,
@@ -72,18 +82,102 @@ nav {
   color: white;
 }
     .dropdown {
-        display: none;
-        font-style: italic;
-        border: none;
-        
-        @media (max-width: 1000px) {
+    display: none;
+    font-style: italic;
+
+    .btn.dropdown-toggle {
+        background-color: $primary-green !important;
+        border: none !important;
+        color: white !important;
+        padding: 10px 25px;
+        font-weight: bold;
+    }
+
+    .btn.dropdown-toggle:hover,
+    .btn.dropdown-toggle:focus,
+    .btn.dropdown-toggle:active {
+        background-color: $dark-green !important;
+        box-shadow: none !important;
+    }
+
+    .dropdown-menu {
+        background-color: rgb(109, 160, 97) !important;
+
+        .dropdown-item {
+            color: white;
+
+            &:hover {
+                background-color: $dark-green;
+            }
+        }
+    }
+}
+    @media (max-width: 1000px) {
+        ul {
+            display: none;
+        }
+
+        .dropdown {
             display: block;
         }
     }
 
-    @media (max-width:1000px) {
-        & ul {
-            display: none;
+    @media (max-width: 1000px) {
+        & {
+            height: 60px;
         }
     }
+}
+
+
+.section1 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0,5s;
+    overflow: hidden;
+    border-radius: 2.5%;
+
+    &:hover {
+        box-shadow: 0px 10px 20px rgba($color: #000000, $alpha: 0.25)
+    }
+
+     & img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        transition: transform 0.5s;
+        border-radius: 2.5%;
+
+        &:hover {
+            transform: scale(1.5) rotate(2deg);
+        }
+    }
+       & p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(72, 185, 97);
+    font-size: 50px;
+    z-index: 2;
+    pointer-events: none;
+    text-align: center;
+    font-family: "Arial GEO BoldItalic", sans-serif;
+      text-shadow:
+    0 0 10px #2a8d3f,
+    0 0 20px #2a8d3f,
+    0 0 30px #2a8d3f,
+    0 0 40px #2a8d3f,
+    0 0 50px #2a8d3f;
+
+
+       @media (max-width: 1000px) {
+        & {
+            font-size: large;
+        }
+       }
+
+} 
 }
