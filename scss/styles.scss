@@ -20,10 +20,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background: #5bbb86;
-    background: linear-gradient(
+    background-color: #5bbb86;
+    background-image: linear-gradient(
         90deg,
-        rgb(92, 129, 89) 0%,
+        rgb(129, 201, 123) 0%,
         rgb(93, 184, 130) 73%,
         rgb(109, 160, 97) 95%
     );
@@ -125,10 +125,14 @@ nav {
     @media (max-width: 1000px) {
         & {
             height: 60px;
+            margin-bottom: 0;
         }
     }
 }
 
+main {
+    padding: 30px;
+}
 
 .section1 {
     width: 100%;
@@ -181,3 +185,86 @@ nav {
 
 } 
 }
+
+.section2 {
+    width: 100%;
+    display: flex;
+    padding: 50px;
+    gap: 1%;
+
+    .left , .right {
+        width: 33%;
+        height: auto;
+        background-color: rgb(144 197 131);
+        background-image: linear-gradient(to bottom, rgb(113, 182, 95), rgb(214, 255, 214));
+        padding: 10px 20px 60px 20px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-direction: column;
+        border-radius: 79% 21% 100% 0% / 13% 86% 14% 87%;
+
+        h1 {
+      font-size: 1.65vw;
+      font-family: "Arial GEO BoldItalic", sans-serif;
+        }
+        
+        p {
+      font-size: 1.65vw;
+      color: #276d36;
+      font-family: "Arial GEO BoldItalic", sans-serif;
+        }
+
+        @media (max-width: 1000px) {
+            & h1, p {
+             font-size: 1.3vw;
+            }
+        }
+        @media (max-width: 700px) {
+            & {
+                padding-bottom: 20px;
+            }
+            
+            & h1, p {
+                font-size: 1.1vw;
+            }
+        }
+        @media (max-width: 475px) {
+            & {
+                gap: 5px;
+                padding: 6.5px;
+            }
+            
+            & h1, p {
+                font-size: 1vw;
+            }
+        }
+    }
+
+    .middle {
+        width: 33%;
+        border-radius: 5%;
+        overflow: hidden;
+        
+        
+        img {
+            width: 100%;
+            height: auto;
+            transform: scale(1.1);
+            transition: transform 0.5s ease; 
+
+            &:hover {
+                transform: scale(1.4) rotate(-2deg);                
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary-green;
+  border-radius: 10px;
+}
+
