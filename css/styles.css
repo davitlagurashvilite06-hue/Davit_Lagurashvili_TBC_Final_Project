@@ -72,17 +72,19 @@ nav .dropdown {
   font-style: italic;
 }
 nav .dropdown .btn.dropdown-toggle {
-  background-color: rgb(129, 211, 108) !important;
+  background-color: rgb(93, 184, 130) !important;
   border: none !important;
   color: white !important;
   padding: 10px 25px;
   font-weight: bold;
+  transition: ease 1s !important;
 }
 nav .dropdown .btn.dropdown-toggle:hover,
 nav .dropdown .btn.dropdown-toggle:focus,
 nav .dropdown .btn.dropdown-toggle:active {
-  background-color: rgb(73.8481675393, 167.0104712042, 49.9895287958) !important;
+  background-color: rgb(109, 160, 97) !important;
   box-shadow: none !important;
+  transform: translateX(-2px);
 }
 nav .dropdown .dropdown-menu {
   background-color: rgb(109, 160, 97) !important;
@@ -140,17 +142,12 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(72, 185, 97);
-  font-size: 50px;
+  font-size: 4vw;
   z-index: 2;
   pointer-events: none;
   text-align: center;
   font-family: "Arial GEO BoldItalic", sans-serif;
   text-shadow: 0 0 10px #2a8d3f, 0 0 20px #2a8d3f, 0 0 30px #2a8d3f, 0 0 40px #2a8d3f, 0 0 50px #2a8d3f;
-}
-@media (max-width: 1000px) {
-  .section1 p {
-    font-size: large;
-  }
 }
 
 .section2 {
@@ -174,11 +171,13 @@ main {
 .section2 .left h1, .section2 .right h1 {
   font-size: 1.65vw;
   font-family: "Arial GEO BoldItalic", sans-serif;
+  pointer-events: none;
 }
 .section2 .left p, .section2 .right p {
   font-size: 1.65vw;
   color: #276d36;
   font-family: "Arial GEO BoldItalic", sans-serif;
+  pointer-events: none;
 }
 @media (max-width: 1000px) {
   .section2 .left h1, .section2 .left p, .section2 .right h1, .section2 .right p {
@@ -253,6 +252,7 @@ main {
   font-size: 2vw;
   text-align: center;
   color: #0d3f18;
+  pointer-events: none;
 }
 .section3 .card-box {
   display: flex;
@@ -261,6 +261,7 @@ main {
   gap: 25px;
   width: 100%;
   padding: 0 2%;
+  margin-bottom: 20px;
 }
 .section3 .card-box .card1, .section3 .card-box .card2, .section3 .card-box .card3 {
   display: flex;
@@ -303,4 +304,90 @@ main {
   .section3 h1 {
     font-size: 29px;
   }
+}
+
+.section4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 100px;
+}
+.section4 h1 {
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  font-size: 2.5vw;
+  pointer-events: none;
+}
+.section4 .cardz {
+  display: flex;
+  flex-direction: row;
+}
+.section4 .cardz .left1, .section4 .cardz .right2 {
+  width: 30%;
+  border-radius: 20px 0 0 20px;
+  overflow: hidden;
+}
+.section4 .cardz .left1 img, .section4 .cardz .right2 img {
+  width: 100%;
+  height: 100%;
+}
+.section4 .cardz .right2 {
+  border-radius: 0 20px 20px 0;
+}
+.section4 .cardz .right1, .section4 .cardz .left2 {
+  width: 70%;
+  border-radius: 0 20px 20px 0;
+  background-color: #d3ebd3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5%;
+  position: relative;
+}
+.section4 .cardz .right1 p, .section4 .cardz .left2 p {
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  font-size: 2vw;
+}
+.section4 .cardz .right1 h1, .section4 .cardz .left2 h1 {
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  font-size: 2.5vw;
+}
+.section4 .cardz .right1::before, .section4 .cardz .left2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 20px 20px 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(42, 141, 63, 0.1);
+  transition: width 1s ease, box-shadow 1s ease;
+}
+.section4 .cardz .right1:hover::before, .section4 .cardz .left2:hover::before {
+  width: 100%;
+  box-shadow: 0 0 30px 15px rgba(42, 141, 63, 0.5);
+}
+.section4 .cardz .left2 {
+  border-radius: 20px 0 0 20px;
+}
+.section4 .cardz .left2::before {
+  display: none;
+  content: none;
+}
+.section4 .cardz .left2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 20px 0 0 20px;
+  width: 0;
+  height: 100%;
+  background-color: rgba(42, 141, 63, 0.1);
+  transition: width 1s ease, box-shadow 1s ease;
+}
+.section4 .cardz .left2:hover::after {
+  width: 100%;
+  box-shadow: 0 0 30px 15px rgba(42, 141, 63, 0.5);
 }/*# sourceMappingURL=styles.css.map */

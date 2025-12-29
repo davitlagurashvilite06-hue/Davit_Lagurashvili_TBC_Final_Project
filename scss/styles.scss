@@ -93,18 +93,20 @@ nav {
     font-style: italic;
 
     .btn.dropdown-toggle {
-        background-color: $primary-green !important;
+        background-color: rgb(93, 184, 130) !important;
         border: none !important;
         color: white !important;
         padding: 10px 25px;
         font-weight: bold;
+        transition: ease 1s !important;
     }
 
     .btn.dropdown-toggle:hover,
     .btn.dropdown-toggle:focus,
     .btn.dropdown-toggle:active {
-        background-color: $dark-green !important;
+        background-color: rgb(109, 160, 97) !important;
         box-shadow: none !important;
+        transform: translateX(-2px);
     }
 
     .dropdown-menu {
@@ -171,7 +173,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(72, 185, 97);
-    font-size: 50px;
+    font-size: 4vw;
     z-index: 2;
     pointer-events: none;
     text-align: center;
@@ -182,13 +184,6 @@ main {
     0 0 30px #2a8d3f,
     0 0 40px #2a8d3f,
     0 0 50px #2a8d3f;
-
-
-       @media (max-width: 1000px) {
-        & {
-            font-size: large;
-        }
-       }
 
 } 
 }
@@ -214,12 +209,14 @@ main {
         h1 {
       font-size: 1.65vw;
       font-family: "Arial GEO BoldItalic", sans-serif;
+      pointer-events: none;
         }
         
         p {
       font-size: 1.65vw;
       color: #276d36;
       font-family: "Arial GEO BoldItalic", sans-serif;
+      pointer-events: none;
         }
 
         @media (max-width: 1000px) {
@@ -302,6 +299,7 @@ main {
     font-size: 2vw;
     text-align: center; 
     color: #0d3f18;
+    pointer-events: none;
   }
 
   .card-box {
@@ -311,6 +309,7 @@ main {
     gap: 25px;
     width: 100%;
     padding: 0 2%;
+    margin-bottom: 20px;
 
     .card1, .card2, .card3 {
       display: flex;
@@ -363,4 +362,105 @@ main {
     font-size: 29px;
   }
 }
+}
+
+
+.section4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 100px;
+
+       & h1 {
+        font-family: "Arial GEO BoldItalic", sans-serif;
+        font-size: 2.5vw;
+        pointer-events: none;
+       }
+
+    & .cardz {
+        display: flex;
+        flex-direction: row;
+       
+
+            .left1, .right2 {
+                width: 30%;
+                border-radius: 20px 0 0 20px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                }
+
+            & .right2 {
+                border-radius: 0 20px 20px 0;
+            }
+
+            & .right1, & .left2 {
+                width: 70%;
+                border-radius: 0 20px 20px 0;
+                background-color: #d3ebd3;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                padding: 5%;
+                position: relative;
+                    
+                     & p {
+                    font-family: "Arial GEO BoldItalic", sans-serif;
+                    font-size: 2vw;
+                    }
+                    & h1 {
+                    font-family: "Arial GEO BoldItalic", sans-serif;
+                    font-size: 2.5vw;
+                    }
+
+                     &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 0 20px 20px 0;
+                    width: 0;
+                    height: 100%;
+                    background-color: rgba(42, 141, 63, 0.1);
+                    transition: width 1s ease, box-shadow 1s ease;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                    box-shadow: 0 0 30px 15px rgba(42,141,63,0.5);
+                }
+            }
+            
+            & .left2 {
+                border-radius: 20px 0 0 20px;
+                
+                &::before {
+                    display: none;
+                    content: none;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border-radius: 20px 0 0 20px;
+                    width: 0;
+                    height: 100%;
+                    background-color: rgba(42, 141, 63, 0.1);
+                    transition: width 1s ease, box-shadow 1s ease;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                    box-shadow: 0 0 30px 15px rgba(42,141,63,0.5);
+                }
+            }
+        }
 }
