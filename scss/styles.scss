@@ -123,12 +123,14 @@ nav {
     .dropdown {
     display: none;
     font-style: italic;
+    width: 150px;
 
     .btn.dropdown-toggle {
-        background-color: rgb(93, 184, 130) !important;
+        background-color: rgb(93, 184, 130, 0.2) !important;
         border: none !important;
         color: white !important;
         padding: 10px 25px;
+        width: 150px;
         font-weight: bold;
         transition: ease 1s !important;
     }
@@ -136,19 +138,20 @@ nav {
     .btn.dropdown-toggle:hover,
     .btn.dropdown-toggle:focus,
     .btn.dropdown-toggle:active {
-        background-color: rgb(109, 160, 97) !important;
+        background-color: rgb(109, 160, 97, 0.2) !important;
         box-shadow: none !important;
         transform: translateX(-2px);
     }
 
     .dropdown-menu {
-        background-color: rgb(109, 160, 97) !important;
+        background-color: rgb(109, 160, 97, 0.2) !important;
+        border: none !important;
 
         .dropdown-item {
             color: white;
 
             &:hover {
-                background-color: $dark-green;
+                background-color: rgba(104, 185, 84, 0.363);
             }
         }
     }
@@ -163,7 +166,7 @@ nav {
 
   &-toggle {
     background: none;
-    background-color: rgb(93, 184, 130) !important;
+    background-color: rgb(93, 184, 130, 0.2) !important;
     border: none !important;
     border-radius: 0.25rem;
     color: white;
@@ -177,7 +180,7 @@ nav {
     transition: ease 1s;
 
     &:hover {
-        background-color: rgb(109, 160, 97) !important;
+        background-color: rgb(109, 160, 97, 0.2) !important;
         box-shadow: none !important;
         transform: translateX(-2px);
     }
@@ -193,7 +196,7 @@ nav {
     left: 0;
     padding: 5px 0 5px 0;
 
-    background-color: rgb(109, 160, 97);
+    background-color: rgb(109, 160, 97, 0.2);
     width: 150px;
     display: none;
     border-radius: 12px;

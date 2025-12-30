@@ -93,30 +93,33 @@ nav ul li a:active {
 nav .dropdown {
   display: none;
   font-style: italic;
+  width: 150px;
 }
 nav .dropdown .btn.dropdown-toggle {
-  background-color: rgb(93, 184, 130) !important;
+  background-color: rgba(93, 184, 130, 0.2) !important;
   border: none !important;
   color: white !important;
   padding: 10px 25px;
+  width: 150px;
   font-weight: bold;
   transition: ease 1s !important;
 }
 nav .dropdown .btn.dropdown-toggle:hover,
 nav .dropdown .btn.dropdown-toggle:focus,
 nav .dropdown .btn.dropdown-toggle:active {
-  background-color: rgb(109, 160, 97) !important;
+  background-color: rgba(109, 160, 97, 0.2) !important;
   box-shadow: none !important;
   transform: translateX(-2px);
 }
 nav .dropdown .dropdown-menu {
-  background-color: rgb(109, 160, 97) !important;
+  background-color: rgba(109, 160, 97, 0.2) !important;
+  border: none !important;
 }
 nav .dropdown .dropdown-menu .dropdown-item {
   color: white;
 }
 nav .dropdown .dropdown-menu .dropdown-item:hover {
-  background-color: rgb(73.8481675393, 167.0104712042, 49.9895287958);
+  background-color: rgba(104, 185, 84, 0.363);
 }
 nav .navdropdownSCSS {
   position: relative;
@@ -127,7 +130,7 @@ nav .navdropdownSCSS {
 }
 nav .navdropdownSCSS-toggle {
   background: none;
-  background-color: rgb(93, 184, 130) !important;
+  background-color: rgba(93, 184, 130, 0.2) !important;
   border: none !important;
   border-radius: 0.25rem;
   color: white;
@@ -141,7 +144,7 @@ nav .navdropdownSCSS-toggle {
   transition: ease 1s;
 }
 nav .navdropdownSCSS-toggle:hover {
-  background-color: rgb(109, 160, 97) !important;
+  background-color: rgba(109, 160, 97, 0.2) !important;
   box-shadow: none !important;
   transform: translateX(-2px);
 }
@@ -153,7 +156,7 @@ nav .navdropdownSCSS-menu {
   top: 50px;
   left: 0;
   padding: 5px 0 5px 0;
-  background-color: rgb(109, 160, 97);
+  background-color: rgba(109, 160, 97, 0.2);
   width: 150px;
   display: none;
   border-radius: 12px;
