@@ -221,7 +221,7 @@ main {
 
         @media (max-width: 1000px) {
             & h1, p {
-             font-size: 1.3vw;
+             font-size: 1.4vw;
             }
         }
         @media (max-width: 700px) {
@@ -230,7 +230,7 @@ main {
             }
             
             & h1, p {
-                font-size: 1.1vw;
+                font-size: 1.3vw;
             }
         }
     }
@@ -377,6 +377,10 @@ main {
         font-family: "Arial GEO BoldItalic", sans-serif;
         font-size: 2.5vw;
         pointer-events: none;
+
+        @media (max-width: 600px) {
+            font-size: 29px;
+        }
        }
 
     & .cardz {
@@ -461,6 +465,19 @@ main {
                     width: 100%;
                     box-shadow: 0 0 30px 15px rgba(42,141,63,0.5);
                 }
+            }
+        }
+
+        @media (max-width: 1000px)  {
+            & {
+                padding: 0;
+            }
+
+            & .cardz .right1 h1,
+            & .cardz .right1 p,
+            & .cardz .left2 h1,
+            & .cardz .left2 p {
+                  font-size: 2.7vw;
             }
         }
 }

@@ -181,7 +181,7 @@ main {
 }
 @media (max-width: 1000px) {
   .section2 .left h1, .section2 .left p, .section2 .right h1, .section2 .right p {
-    font-size: 1.3vw;
+    font-size: 1.4vw;
   }
 }
 @media (max-width: 700px) {
@@ -189,7 +189,7 @@ main {
     padding-bottom: 20px;
   }
   .section2 .left h1, .section2 .left p, .section2 .right h1, .section2 .right p {
-    font-size: 1.1vw;
+    font-size: 1.3vw;
   }
 }
 .section2 .middle {
@@ -319,6 +319,11 @@ main {
   font-size: 2.5vw;
   pointer-events: none;
 }
+@media (max-width: 600px) {
+  .section4 h1 {
+    font-size: 29px;
+  }
+}
 .section4 .cardz {
   display: flex;
   flex-direction: row;
@@ -390,4 +395,12 @@ main {
 .section4 .cardz .left2:hover::after {
   width: 100%;
   box-shadow: 0 0 30px 15px rgba(42, 141, 63, 0.5);
+}
+@media (max-width: 1000px) {
+  .section4 {
+    padding: 0;
+  }
+  .section4 .cardz .right1 h1, .section4 .cardz .right1 p, .section4 .cardz .left2 h1, .section4 .cardz .left2 p {
+    font-size: 2.7vw;
+  }
 }/*# sourceMappingURL=styles.css.map */
