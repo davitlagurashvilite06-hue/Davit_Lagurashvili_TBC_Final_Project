@@ -2,15 +2,30 @@ $primary-green: rgb(129, 211, 108);
 $dark-green: darken($primary-green, 20%);
 
 @mixin leaf-style {
+  position: relative;
+  color: #afd5af;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    width: 100%; 
+    height: 3px;
     background-color: $primary-green;
-    border-radius: 55%;
-    transition: all 0.3s ease;
-    
-    &:hover {
-        background-color: $dark-green;
-        transform: scale(1.1) translateY(-5px);
-    }
+    border-radius: 5%;
+    transform: translateX(-50%) scaleX(0); 
+    transform-origin: center; 
+    transition: all 0.5s ease;
+  }
+
+  &:hover::before {
+    transform: translateX(-50%) scaleX(1);
+    background-color: $dark-green;
+  }
 }
+
+
 
 body {
     background-color: #afd5af;
@@ -22,18 +37,41 @@ body {
                 z-index: 10;
     }
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    background-color: #5bbb86;
+
+.behindwall {
+    width: 100%;
+    z-index: -1;
+    background-color: rgb(96, 204, 145);
     background-image: linear-gradient(
         90deg,
         rgb(129, 201, 123) 0%,
         rgb(93, 184, 130) 73%,
         rgb(109, 160, 97) 95%
     );
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+
+    @media (max-width: 1000px) {
+        height: 60px;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(96, 204, 145, 0.2);
+    background-image: linear-gradient(
+        90deg,
+        rgb(129, 201, 123, 0.2) 0%,
+        rgb(93, 184, 130, 0.2) 73%,
+        rgb(109, 160, 97, 0.2) 95%
+    );
+    backdrop-filter: blur(30px);
     margin-bottom: 30px;
     padding: 20px;
 
@@ -52,11 +90,12 @@ nav {
 
             a {
                 text-decoration: none !important;
-                color: white;
                 font-weight: 600;
                 padding: 12px 25px;
                 display: block;
-                @include leaf-style;                
+                color: #0d3f18;
+                @include leaf-style;
+                transition: all 0.3s ease;                
                 
                 @media (min-width: 1200px) {
                     & {
@@ -64,15 +103,6 @@ nav {
                     }
                 }
                 
-                &.selected {
-                    background-color: $dark-green;
-                    border-radius: 46% 54% 81% 19% / 85% 7% 93% 15% ;
-                    pointer-events: none;
-                    
-                    &:hover {
-                        transform: none;
-                    }
-                }
             }
         }
     }
@@ -82,12 +112,14 @@ nav {
                     height: 30px;
                 }
 
-    ul li a,
     ul li a:hover,
     ul li a:focus,
     ul li a:active {
-  color: white;
+  color: #afd5af;
+  text-shadow:0 0 10px #2a8d3f, 0 0 20px #2a8d3f, 0 0 30px #2a8d3f, 0 0 40px #2a8d3f, 0 0 50px #2a8d3f !important;
+
 }
+
     .dropdown {
     display: none;
     font-style: italic;
@@ -121,22 +153,90 @@ nav {
         }
     }
 }
-    @media (max-width: 1000px) {
-        ul {
+
+      .navdropdownSCSS {
+  position: relative;
+  display: none;
+  font-style: italic;
+  width: 150px;
+  height: 45px;
+
+  &-toggle {
+    background: none;
+    background-color: rgb(93, 184, 130) !important;
+    border: none !important;
+    border-radius: 0.25rem;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: medium;
+    width: 150px;
+    height: 45px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: ease 1s;
+
+    &:hover {
+        background-color: rgb(109, 160, 97) !important;
+        box-shadow: none !important;
+        transform: translateX(-2px);
+    }
+  }
+
+  .navdropdownSCSS-toggle:hover {
+  transform: none;
+}
+
+  &-menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 5px 0 5px 0;
+
+    background-color: rgb(109, 160, 97);
+    width: 150px;
+    display: none;
+    border-radius: 12px;
+
+    a {
+      display: block;
+      color: white;
+      padding: 4px 24px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $dark-green;
+      }
+    }
+  }
+
+  &:focus-within &-menu,
+  &:hover &-menu {
+    display: block;
+  }
+
+&:focus-within .navdropdownSCSS-menu {
+    display: block;
+  }
+      }
+    @media (max-width: 1024px) {
+        & ul {
             display: none;
         }
 
-        .dropdown {
+         .dropdown {
             display: block;
         }
-    }
 
-    @media (max-width: 1000px) {
+         .navdropdownSCSS {
+            display: block;
+        }    
         & {
             height: 60px;
             margin-bottom: 0;
         }
     }
+
 }
 
 main {
@@ -219,7 +319,7 @@ main {
       pointer-events: none;
         }
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1024px) {
             & h1, p {
              font-size: 1.4vw;
             }
@@ -347,7 +447,7 @@ main {
 
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   & .card-box .card1, & .card-box .card2, & .card-box .card3 {
     flex: 1 1 45%;
   }
@@ -468,7 +568,7 @@ main {
             }
         }
 
-        @media (max-width: 1000px)  {
+        @media (max-width: 1024px)  {
             & {
                 padding: 0;
             }
@@ -481,3 +581,4 @@ main {
             }
         }
 }
+
