@@ -54,7 +54,7 @@ body {
     top: 0;
 
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         height: 60px;
     }
 }
@@ -95,7 +95,7 @@ nav {
                 display: block;
                 color: #0d3f18;
                 @include leaf-style;
-                transition: all 0.3s ease;                
+                transition: all 0.3s ease; 
                 
                 @media (min-width: 1200px) {
                     & {
@@ -158,8 +158,12 @@ nav {
 }
 
       .navdropdownSCSS {
-  position: relative;
-  display: none;
+  position: absolute;
+  right: 20px;
+  opacity: 0; 
+  visibility: hidden; 
+  pointer-events: none; 
+  transition: opacity 0.25s ease;
   font-style: italic;
   width: 150px;
   height: 45px;
@@ -177,7 +181,7 @@ nav {
     height: 45px;
     padding: 10px 25px;
     cursor: pointer;
-    transition: ease 1s;
+    transition: all 1s ease;
 
     &:hover {
         background-color: rgb(109, 160, 97, 0.2) !important;
@@ -185,10 +189,6 @@ nav {
         transform: translateX(-2px);
     }
   }
-
-  .navdropdownSCSS-toggle:hover {
-  transform: none;
-}
 
   &-menu {
     position: absolute;
@@ -198,7 +198,10 @@ nav {
 
     background-color: rgb(109, 160, 97, 0.2);
     width: 150px;
-    display: none;
+    opacity: 0; 
+    visibility: hidden; 
+    pointer-events: none; 
+    transition: opacity 0.25s ease;
     border-radius: 12px;
 
     a {
@@ -208,18 +211,22 @@ nav {
       text-decoration: none;
 
       &:hover {
-        background-color: $dark-green;
+        background-color: rgba(104, 185, 84, 0.363);
       }
     }
   }
 
   &:focus-within &-menu,
   &:hover &-menu {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
 &:focus-within .navdropdownSCSS-menu {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
       }
     @media (max-width: 1024px) {
@@ -232,7 +239,9 @@ nav {
         }
 
          .navdropdownSCSS {
-            display: block;
+            opacity: 1; 
+            visibility: visible; 
+            pointer-events: auto;
         }    
         & {
             height: 60px;

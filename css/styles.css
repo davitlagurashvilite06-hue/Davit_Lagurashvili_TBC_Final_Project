@@ -18,7 +18,7 @@ body header {
   left: 0;
   top: 0;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .behindwall {
     height: 60px;
   }
@@ -122,8 +122,12 @@ nav .dropdown .dropdown-menu .dropdown-item:hover {
   background-color: rgba(104, 185, 84, 0.363);
 }
 nav .navdropdownSCSS {
-  position: relative;
-  display: none;
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
   font-style: italic;
   width: 150px;
   height: 45px;
@@ -141,15 +145,12 @@ nav .navdropdownSCSS-toggle {
   height: 45px;
   padding: 10px 25px;
   cursor: pointer;
-  transition: ease 1s;
+  transition: all 1s ease;
 }
 nav .navdropdownSCSS-toggle:hover {
   background-color: rgba(109, 160, 97, 0.2) !important;
   box-shadow: none !important;
   transform: translateX(-2px);
-}
-nav .navdropdownSCSS .navdropdownSCSS-toggle:hover {
-  transform: none;
 }
 nav .navdropdownSCSS-menu {
   position: absolute;
@@ -158,7 +159,10 @@ nav .navdropdownSCSS-menu {
   padding: 5px 0 5px 0;
   background-color: rgba(109, 160, 97, 0.2);
   width: 150px;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
   border-radius: 12px;
 }
 nav .navdropdownSCSS-menu a {
@@ -168,13 +172,17 @@ nav .navdropdownSCSS-menu a {
   text-decoration: none;
 }
 nav .navdropdownSCSS-menu a:hover {
-  background-color: rgb(73.8481675393, 167.0104712042, 49.9895287958);
+  background-color: rgba(104, 185, 84, 0.363);
 }
 nav .navdropdownSCSS:focus-within nav .navdropdownSCSS-menu, nav .navdropdownSCSS:hover nav .navdropdownSCSS-menu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 nav .navdropdownSCSS:focus-within .navdropdownSCSS-menu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 @media (max-width: 1024px) {
   nav ul {
@@ -184,7 +192,9 @@ nav .navdropdownSCSS:focus-within .navdropdownSCSS-menu {
     display: block;
   }
   nav .navdropdownSCSS {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
   nav {
     height: 60px;
