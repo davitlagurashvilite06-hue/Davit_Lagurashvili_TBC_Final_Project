@@ -1,2 +1,2 @@
-# Davit_Lagurashvili_TBC_lecture_16
+# Davit_Lagurashvili_TBC_final_project
 bootstrap.
