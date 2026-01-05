@@ -659,6 +659,7 @@ main {
   height: 100%;
   background-color: #5bbb86;
   font-size: 1.2vw;
+  color: black;
   border: dotted 2px green;
   font-family: "Arial GEO BoldItalic", sans-serif;
   border-radius: 5px;
