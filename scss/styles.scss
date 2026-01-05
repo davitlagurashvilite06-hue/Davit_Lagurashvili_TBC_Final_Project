@@ -681,6 +681,9 @@ main {
     .review {
       width: 90%;
     }
+    & h1 {
+      font-size: 29px;
+    }    
   }
 }
 
@@ -833,11 +836,132 @@ main {
     padding: 5px 0 5px 0;
   }
   & .rightie .button6 {
-    height: 4vw;
+    height: max-content;
   } 
   & .rightie .button6 button {
+    height: 40px;
     font-size: 2.67vw;
   }
 }
 
+}
+
+footer {
+  width: 100%;
+  min-height: 350px;
+  height: auto;
+  display: flex;
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
+  gap: 10%;
+  background-color: rgb(96, 204, 145);
+  background-image: linear-gradient(
+        90deg,
+        rgb(129, 201, 123) 0%,
+        rgb(93, 184, 130) 73%,
+        rgb(109, 160, 97) 95%
+    );
+
+    & .trust {
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: clamp(15px, 1vw, 20px);
+
+      .footerimg {
+        width: 50px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-right: 5px;
+      }
+
+      @media (max-width:600px) {
+        & {
+          font-size: 3.5vw;
+        }
+      }
+    }
+& .footerlists {
+
+  display: flex;
+  justify-content: space-evenly;
+
+    & .line {
+      height: 140px;
+      width: 2px;
+      background-color: #3975457a;
+    }
+    & .footerlist {
+           display: flex;
+           justify-content: flex-start;
+           flex-direction: column;
+           font-size: clamp(15px, 1vw, 20px);
+
+      & ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 2.5px;
+        
+        & li {
+          font-size: clamp(15px, 1vw, 20px);
+ 
+        
+        & a {
+                text-decoration: none !important;
+                font-weight: 600;
+                padding: 6px;
+                display: block;
+                @include leaf-style;
+                width: max-content;
+                font-size: clamp(15px, 1vw, 20px);
+                color: $dark-green;
+                transition: all 0.3s ease; 
+                font-family: "Arial GEO BoldItalic", sans-serif;
+
+                &:hover,
+                &:focus,
+                &:active {
+              color: #afd5af;
+              text-shadow:0 0 10px #2a8d3f, 0 0 20px #2a8d3f, 0 0 30px #2a8d3f, 0 0 40px #2a8d3f, 0 0 50px #2a8d3f !important;
+                }
+          }
+      }
+    }
+
+    & .selectedul {
+      flex-direction: row;
+      & li {
+       & a {
+        & i {
+      font-size: clamp(30px, 2vw, 50px);
+        }
+      }
+    }
+  }
+
+  }
+
+@media (max-width: 600px) {
+  & {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  & .line {
+    display: none;
+  }
+}
+
+}
+    & .bottomtrust {
+      align-self: flex-end;
+      color: #145822b9;
+      font-size: clamp(15px, 1vw, 20px);
+    }
 }
