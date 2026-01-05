@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #afd5af;
 }
@@ -127,10 +131,9 @@ nav .navdropdownSCSS {
   right: 20px;
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
   transition: opacity 0.25s ease;
   font-style: italic;
-  width: 150px;
+  width: 170px;
   height: 45px;
 }
 nav .navdropdownSCSS-toggle {
@@ -142,7 +145,7 @@ nav .navdropdownSCSS-toggle {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
   font-size: medium;
-  width: 150px;
+  width: 170px;
   height: 45px;
   padding: 10px 25px;
   cursor: pointer;
@@ -159,10 +162,9 @@ nav .navdropdownSCSS-menu {
   left: 0;
   padding: 5px 0 5px 0;
   background-color: rgba(109, 160, 97, 0.2);
-  width: 150px;
+  width: 170px;
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
   transition: opacity 0.25s ease;
   border-radius: 12px;
 }
@@ -311,26 +313,17 @@ main {
   .section2 .left, .section2 .right, .section2 .middle {
     width: 100%;
     background-image: none;
-    border-radius: 7.5%;
+    border-radius: 15px;
     gap: 7.5px;
   }
   .section2 .left h1, .section2 .left p, .section2 .right h1, .section2 .right p {
-    font-size: 2vw;
+    font-size: 3.5vw;
   }
 }
 @media (max-width: 475px) {
   .section2 {
     padding: 15px;
   }
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(129, 211, 108);
-  border-radius: 10px;
 }
 
 .section3 {
@@ -581,5 +574,143 @@ main {
 @media (max-width: 600px) {
   .section5 .review {
     width: 90%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(129, 211, 108);
+  border-radius: 10px;
+}
+
+.section6 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 200px 20px 200px;
+}
+.section6 .leftie {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0 30px 0 30px;
+  transition: all ease 0.4s;
+  border-radius: 20px 0 0 20px;
+  background: rgba(71, 202, 100, 0.3411764706);
+  background: linear-gradient(90deg, rgba(51, 138, 60, 0.4) 0%, rgba(94, 171, 109, 0.4) 50%, rgba(71, 202, 100, 0.4) 100%);
+}
+.section6 .leftie h1 {
+  font-size: 2vw;
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  pointer-events: none;
+}
+.section6 .leftie p {
+  font-size: 1.5vw;
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  pointer-events: none;
+}
+.section6 .leftie:hover {
+  box-shadow: 0 0 40px rgba(75, 199, 102, 0.4);
+  transform: translateY(-4px);
+}
+.section6 .rightie {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0 20px 20px 0;
+  background: rgba(71, 202, 100, 0.3411764706);
+  background: linear-gradient(90deg, rgba(71, 202, 100, 0.4) 0%, rgba(94, 171, 109, 0.4) 50%, rgba(51, 138, 60, 0.4) 100%);
+  transition: all ease 0.4s;
+  padding: 5px 0 5px 0;
+}
+.section6 .rightie .logo6 {
+  width: 50%;
+}
+.section6 .rightie .logo6 img {
+  width: 100%;
+  border-radius: 35%;
+  border: ridge rgba(25, 228, 25, 0.5) 2px;
+  transition: all ease 0.3s;
+}
+.section6 .rightie .logo6 img:hover {
+  box-shadow: 0 0 40px rgba(75, 199, 102, 0.4);
+  transform: skewx(0.5deg) skewY(-0.5deg);
+}
+.section6 .rightie .button6 {
+  width: 50%;
+  border-radius: 5px;
+  height: 3vw;
+}
+.section6 .rightie .button6 button {
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+  background-color: #5bbb86;
+  font-size: 1.2vw;
+  border: dotted 2px green;
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  border-radius: 5px;
+  transition: all ease 0.5s;
+}
+.section6 .rightie .button6 button:hover {
+  box-shadow: 0 0 40px rgba(38, 199, 73, 0.4);
+  transform: translateY(-4px);
+}
+.section6 .rightie:hover {
+  box-shadow: 0 0 40px rgba(75, 199, 102, 0.4);
+  transform: translateY(-4px);
+}
+@media (max-width: 1024px) {
+  .section6 .rightie {
+    padding: 2.5px 0 2.5px 0;
+    gap: 7.5px;
+  }
+}
+@media (max-width: 1024px) {
+  .section6 {
+    padding: 20px 50px 20px 50px;
+  }
+  .section6 .leftie {
+    gap: 10.5px;
+    padding: 0 30px 0 50px;
+  }
+  .section6 .rightie .button6 button {
+    font-size: 1.5vw;
+  }
+}
+@media (max-width: 600px) {
+  .section6 {
+    padding: 20px 0 20px 0;
+    flex-direction: column;
+  }
+  .section6 .leftie {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    background: rgba(71, 202, 100, 0.3411764706);
+    padding: 5px 20px 5px 20px;
+  }
+  .section6 .leftie p, .section6 .leftie h1 {
+    font-size: 4vw;
+  }
+  .section6 .rightie {
+    background: rgba(71, 202, 100, 0.3411764706);
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    padding: 5px 0 5px 0;
+  }
+  .section6 .rightie .button6 {
+    height: 4vw;
+  }
+  .section6 .rightie .button6 button {
+    font-size: 2.67vw;
   }
 }/*# sourceMappingURL=styles.css.map */
