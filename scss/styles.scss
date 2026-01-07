@@ -62,33 +62,62 @@ body {
 }
 
 nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 80px;
     background-color: rgb(96, 204, 145, 0.2);
+    background-image: -webkit-gradient(
+        linear,
+        left top, right top,
+        from(rgb(129, 201, 123, 0.2)),
+        color-stop(73%, rgb(93, 184, 130, 0.2)),
+        color-stop(95%, rgb(109, 160, 97, 0.2))
+    );
+    background-image: -o-linear-gradient(
+        left,
+        rgb(129, 201, 123, 0.2) 0%,
+        rgb(93, 184, 130, 0.2) 73%,
+        rgb(109, 160, 97, 0.2) 95%
+    );
     background-image: linear-gradient(
         90deg,
         rgb(129, 201, 123, 0.2) 0%,
         rgb(93, 184, 130, 0.2) 73%,
         rgb(109, 160, 97, 0.2) 95%
     );
-    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
     margin-bottom: 30px;
     padding: 20px;
 
 
     ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         gap: 25px;
         padding: 0;
         width: 72%;
 
         li {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;           
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;           
 
             a {
                 text-decoration: none !important;
@@ -97,6 +126,8 @@ nav {
                 display: block;
                 @include leaf-style;
                 color: $dark-green;
+                -webkit-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
                 transition: all 0.3s ease; 
                 font-family: "Arial GEO BoldItalic", sans-serif;
                 
@@ -135,6 +166,8 @@ nav {
         padding: 10px 25px;
         width: 150px;
         font-weight: bold;
+        -webkit-transition: ease 1s !important;
+        -o-transition: ease 1s !important;
         transition: ease 1s !important;
     }
 
@@ -142,8 +175,11 @@ nav {
     .btn.dropdown-toggle:focus,
     .btn.dropdown-toggle:active {
         background-color: rgb(109, 160, 97, 0.2) !important;
-        box-shadow: none !important;
-        transform: translateX(-2px);
+        -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+        -webkit-transform: translateX(-2px);
+            -ms-transform: translateX(-2px);
+                transform: translateX(-2px);
     }
 
     .dropdown-menu {
@@ -165,6 +201,8 @@ nav {
   right: 20px;
   opacity: 0; 
   visibility: hidden; 
+  -webkit-transition: opacity 0.25s ease; 
+  -o-transition: opacity 0.25s ease; 
   transition: opacity 0.25s ease;
   font-style: italic;
   width: 170px;
@@ -183,12 +221,17 @@ nav {
     height: 45px;
     padding: 10px 25px;
     cursor: pointer;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
 
     &:hover {
         background-color: rgb(109, 160, 97, 0.2) !important;
-        box-shadow: none !important;
-        transform: translateX(-2px);
+        -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+        -webkit-transform: translateX(-2px);
+            -ms-transform: translateX(-2px);
+                transform: translateX(-2px);
     }
   }
 
@@ -202,6 +245,8 @@ nav {
     width: 170px;
     opacity: 0; 
     visibility: hidden; 
+    -webkit-transition: opacity 0.25s ease; 
+    -o-transition: opacity 0.25s ease; 
     transition: opacity 0.25s ease;
     border-radius: 12px;
 
