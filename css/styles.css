@@ -831,4 +831,149 @@ footer .bottomtrust {
   align-self: flex-end;
   color: rgba(20, 88, 34, 0.7254901961);
   font-size: clamp(15px, 1vw, 20px);
+}
+
+.AUsection1 {
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  width: 100%;
+  background-image: url(/images/background-one.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+.AUsection1 .aboutusdiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 5%;
+  border-radius: 20px;
+}
+.AUsection1 .aboutusdiv div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.0078431373);
+  gap: 15px;
+  width: 25%;
+}
+.AUsection1 .aboutusdiv div h1 {
+  font-size: clamp(29px, 3vw, 60px);
+  color: #70a370;
+  text-shadow: 0 0 6px rgba(175, 213, 175, 0.6), 0 0 12px rgba(175, 213, 175, 0.35);
+  pointer-events: none;
+}
+.AUsection1 .aboutusdiv div p {
+  font-size: clamp(19px, 2vw, 40px);
+  color: #afd5af;
+  text-shadow: 0 0 6px rgba(175, 213, 175, 0.6), 0 0 12px rgba(175, 213, 175, 0.35);
+  pointer-events: none;
+}
+@media (max-width: 1024px) {
+  .AUsection1 .aboutusdiv div h1 {
+    font-size: clamp(15px, 3vw, 40px);
+  }
+  .AUsection1 .aboutusdiv div p {
+    font-size: clamp(10px, 2vw, 32px);
+  }
+}
+.AUsection1 .aboutusdiv img {
+  width: 65%;
+  border-radius: 15px;
+  transition: all ease 0.4s;
+}
+.AUsection1 .aboutusdiv img:hover {
+  transform: scale(1.01) translateY(-3px);
+}
+@media (max-width: 1024px) {
+  .AUsection1 .aboutusdiv {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .AUsection1 .aboutusdiv img {
+    display: none;
+  }
+  .AUsection1 .aboutusdiv div {
+    width: 100%;
+  }
+  .AUsection1 .aboutusdiv div h1 {
+    font-size: clamp(20px, 2vw, 40px);
+    color: #1d311d;
+    text-shadow: 0 0 6px rgba(175, 213, 175, 0.6), 0 0 12px rgba(175, 213, 175, 0.35);
+  }
+  .AUsection1 .aboutusdiv div p {
+    font-size: clamp(15px, 2vw, 40px);
+  }
+}
+
+.AUsection2 {
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.AUsection2 h1 {
+  font-size: clamp(25px, 3vw, 50px);
+}
+.AUsection2 .cardybox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 5% 0 5%;
+  align-items: center;
+  justify-content: center;
+  gap: 98px;
+}
+.AUsection2 .cardybox .cardy {
+  width: 300px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 25px;
+  border-radius: 20px;
+  background: #379647;
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(201, 201, 201) 26%, rgb(71, 202, 100) 27%, rgb(37, 97, 50) 100%);
+}
+.AUsection2 .cardybox .cardy .line2 {
+  width: 300px;
+  height: 2px;
+  background-color: #818181;
+}
+.AUsection2 .cardybox .cardy h1 {
+  font-size: 20px;
+}
+.AUsection2 .cardybox .cardy p {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 18px;
+}
+.AUsection2 .cardybox .cardy span {
+  font-size: 13px;
+  color: #276d36;
+  text-shadow: 0 0 6px rgba(175, 213, 175, 0.6), 0 0 12px rgba(175, 213, 175, 0.35);
+}
+@media (max-width: 1440px) {
+  .AUsection2 .cardybox {
+    gap: 32px;
+  }
+}
+@media (max-width: 1024px) {
+  .AUsection2 .cardybox {
+    gap: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .AUsection2 .cardybox {
+    flex-direction: column;
+    gap: 20px;
+  }
 }/*# sourceMappingURL=styles.css.map */

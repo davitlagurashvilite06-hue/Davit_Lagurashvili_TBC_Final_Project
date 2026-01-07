@@ -1011,3 +1011,172 @@ footer {
       font-size: clamp(15px, 1vw, 20px);
     }
 }
+
+.AUsection1 {
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  width: 100%;
+  background-image: url(/images/background-one.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+  border-radius: 20px;
+
+    & .aboutusdiv {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+          backdrop-filter: blur(10px);
+          padding: 5%;
+          border-radius: 20px;
+
+          & div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #00000002;
+            gap: 15px;
+            width: 25%;
+
+            h1 {
+              font-size: clamp(29px, 3vw, 60px);
+              color: #70a370;
+              text-shadow:
+                0 0 6px rgba(175, 213, 175, 0.6),
+                0 0 12px rgba(175, 213, 175, 0.35);
+              pointer-events: none;
+            }
+
+            p {
+              font-size: clamp(19px, 2vw, 40px);
+              color: #afd5af;
+              text-shadow:
+                0 0 6px rgba(175, 213, 175, 0.6),
+                0 0 12px rgba(175, 213, 175, 0.35);
+              pointer-events: none;
+            }
+
+            @media (max-width:1024px) {
+              & h1 {
+                font-size: clamp(15px, 3vw, 40px);
+              }
+              & p {
+                font-size: clamp(10px, 2vw, 32px);
+              }
+            }
+
+          }
+
+            img {
+              width: 65%;
+              border-radius: 15px;
+              transition: all ease 0.4s;
+
+              &:hover {
+                transform: scale(1.01) translateY(-3px);
+              }
+            }
+
+          @media (max-width:1024px) {
+            & {
+                margin-top: 20px;
+              }
+          }
+          @media (max-width:600px) {  
+              & img {
+                display: none;
+              }
+              & div {
+                width: 100%;
+              }
+              & div h1{
+                font-size: clamp(20px, 2vw, 40px);
+              color: #1d311d;
+              text-shadow:
+                0 0 6px rgba(175, 213, 175, 0.6),
+                0 0 12px rgba(175, 213, 175, 0.35);
+              }
+              & div p {
+                font-size: clamp(15px, 2vw, 40px);
+              }
+            }
+          }
+}
+
+.AUsection2 {
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+      
+  
+     h1 {
+       font-size: clamp(25px, 3vw, 50px);
+      }
+
+      .cardybox {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0 5% 0 5%;
+        align-items: center;
+        justify-content: center;
+        gap: 98px;
+
+
+          .cardy {
+             width: 300px;
+             min-height: 300px;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             gap: 10px;
+             padding: 25px;
+             border-radius: 20px;
+             background: #379647;
+             background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(201 201 201) 26%, rgb(71, 202, 100) 27%, rgb(37, 97, 50) 100%);
+
+
+            .line2 {
+            width: 300px;
+            height: 2px;
+            background-color: #818181;
+            }
+
+            h1 {
+               font-size: 20px;
+            }
+
+            p {
+              color: rgba(255, 255, 255, 0.76);
+              font-size: 18px;
+            }
+
+            span {
+               font-size: 13px;
+               color: #276d36;
+               text-shadow:
+                0 0 6px rgba(175, 213, 175, 0.6),
+                0 0 12px rgba(175, 213, 175, 0.35);
+            }
+
+          }
+
+          @media (max-width: 1440px) {
+            gap: 32px;
+          }
+          @media (max-width: 1024px) {
+            gap: 25px;
+          }
+          @media (max-width: 600px) {
+            flex-direction: column;
+            gap: 20px;
+          }
+      }
+}
+
+// add hovers on them tommorrow
