@@ -25,6 +25,14 @@ $dark-green: darken($primary-green, 20%);
   }
 }
 
+@mixin hover-lift {
+  transition: all ease 0.4s;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -39,6 +47,8 @@ body {
                 z-index: 10;
     }
 }
+
+// nav for all pages, and it's background wall
 
 .behindwall {
     width: 100%;
@@ -299,6 +309,8 @@ nav {
 main {
     padding: 30px;
 }
+
+// landing page, index
 
 .section1 {
     width: 100%;
@@ -891,6 +903,8 @@ main {
 
 }
 
+// footer for all pages
+
 footer {
   width: 100%;
   min-height: 350px;
@@ -1010,6 +1024,8 @@ footer {
     }
 }
 
+// about us page
+
 .AUsection1 {
   font-family: "Arial GEO BoldItalic", sans-serif;
   width: 100%;
@@ -1065,7 +1081,7 @@ footer {
 
             img {
               width: 65%;
-              border-radius: 15px;
+              border-radius: 100px;
               transition: all ease 0.4s;
 
               &:hover {
@@ -1079,18 +1095,19 @@ footer {
               }
           }
           @media (max-width:600px) {  
+              & {
+                flex-direction: column;
+                gap: 20px;
+              }
               & img {
-                display: none;
+                width: 80%;
               }
               & div {
                 width: 100%;
               }
               & div h1{
                 font-size: clamp(20px, 2vw, 40px);
-              color: #1d311d;
-              text-shadow:
-                0 0 6px rgba(175, 213, 175, 0.6),
-                0 0 12px rgba(175, 213, 175, 0.35);
+                color: #1d311d;
               }
               & div p {
                 font-size: clamp(15px, 2vw, 40px);
@@ -1189,7 +1206,105 @@ footer {
           }
           @media (max-width: 600px) {
             flex-direction: column;
-            gap: 20px;
+            gap:20px;
+            padding: 0 2% 0 2%;
           }
       }
+}
+
+
+// services page
+
+
+.Ssection1 {
+     width: 100%;
+     font-family: "ALK Rounded Nusx Med", sans-serif;
+     padding: 20px;
+
+     .service-wrapper {
+
+      .service {
+          max-width: 1200px;
+          margin: 0 auto;
+          text-align: center;
+
+          h1 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #333;
+          }
+
+          .cardis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 20px;
+
+            .cardi {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              background-color: rgba(93, 184, 130, 0.2);
+              padding: 30px;
+              border-radius: 15px;             
+              min-height: 400px;
+              justify-content: space-evenly;
+              transition: all ease 0.4s;
+              @include hover-lift;
+
+              & h2 {
+                pointer-events: none;
+                color: rgb(30, 99, 30);              
+              }
+               p {
+                font-size: 25px;
+                color: rgb(66, 131, 66);
+                pointer-events: none;
+              }
+               i {
+                font-size: 50px;
+              }
+
+              &:hover {
+                background-color: $primary-green;
+                i, h2, p {
+                    color: white;
+        }
+              }
+            }
+          }
+     }
+     }
+
+     @media (max-width: 600px){
+      & {
+        padding: 9px;
+      }
+      & .service-wrapper .service .cardis {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+     }
+}
+
+.Ssection2 {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+
+  button {
+    height: 100px;
+    border: none;
+    background-color: rgba(93, 184, 130, 0.5);
+    max-width: 300px;
+    color: rgb(21, 68, 21);
+    cursor: pointer;
+    font-size: large;
+    border-radius: 20px;
+    transition: all ease 0.4s;
+    @include hover-lift ;
+
+  }
 }

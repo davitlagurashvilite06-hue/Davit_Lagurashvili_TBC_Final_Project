@@ -880,7 +880,7 @@ footer .bottomtrust {
 }
 .AUsection1 .aboutusdiv img {
   width: 65%;
-  border-radius: 15px;
+  border-radius: 100px;
   transition: all ease 0.4s;
 }
 .AUsection1 .aboutusdiv img:hover {
@@ -892,8 +892,12 @@ footer .bottomtrust {
   }
 }
 @media (max-width: 600px) {
+  .AUsection1 .aboutusdiv {
+    flex-direction: column;
+    gap: 20px;
+  }
   .AUsection1 .aboutusdiv img {
-    display: none;
+    width: 80%;
   }
   .AUsection1 .aboutusdiv div {
     width: 100%;
@@ -901,7 +905,6 @@ footer .bottomtrust {
   .AUsection1 .aboutusdiv div h1 {
     font-size: clamp(20px, 2vw, 40px);
     color: #1d311d;
-    text-shadow: 0 0 6px rgba(175, 213, 175, 0.6), 0 0 12px rgba(175, 213, 175, 0.35);
   }
   .AUsection1 .aboutusdiv div p {
     font-size: clamp(15px, 2vw, 40px);
@@ -991,5 +994,95 @@ footer .bottomtrust {
   .AUsection2 .cardybox {
     flex-direction: column;
     gap: 20px;
+    padding: 0 2% 0 2%;
   }
+}
+
+.Ssection1 {
+  width: 100%;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  padding: 20px;
+}
+.Ssection1 .service-wrapper .service {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.Ssection1 .service-wrapper .service h1 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #333;
+}
+.Ssection1 .service-wrapper .service .cardis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 20px;
+}
+.Ssection1 .service-wrapper .service .cardis .cardi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(93, 184, 130, 0.2);
+  padding: 30px;
+  border-radius: 15px;
+  min-height: 400px;
+  justify-content: space-evenly;
+  transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+.Ssection1 .service-wrapper .service .cardis .cardi:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.Ssection1 .service-wrapper .service .cardis .cardi h2 {
+  pointer-events: none;
+  color: rgb(30, 99, 30);
+}
+.Ssection1 .service-wrapper .service .cardis .cardi p {
+  font-size: 25px;
+  color: rgb(66, 131, 66);
+  pointer-events: none;
+}
+.Ssection1 .service-wrapper .service .cardis .cardi i {
+  font-size: 50px;
+}
+.Ssection1 .service-wrapper .service .cardis .cardi:hover {
+  background-color: rgb(129, 211, 108);
+}
+.Ssection1 .service-wrapper .service .cardis .cardi:hover i, .Ssection1 .service-wrapper .service .cardis .cardi:hover h2, .Ssection1 .service-wrapper .service .cardis .cardi:hover p {
+  color: white;
+}
+@media (max-width: 600px) {
+  .Ssection1 {
+    padding: 9px;
+  }
+  .Ssection1 .service-wrapper .service .cardis {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.Ssection2 {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+}
+.Ssection2 button {
+  height: 100px;
+  border: none;
+  background-color: rgba(93, 184, 130, 0.5);
+  max-width: 300px;
+  color: rgb(21, 68, 21);
+  cursor: pointer;
+  font-size: large;
+  border-radius: 20px;
+  transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+.Ssection2 button:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }/*# sourceMappingURL=styles.css.map */
