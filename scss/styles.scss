@@ -150,7 +150,6 @@ nav {
     ul li a:focus,
     ul li a:active {
   color: #afd5af;
-  text-shadow:0 0 10px #2a8d3f, 0 0 20px #2a8d3f, 0 0 30px #2a8d3f, 0 0 40px #2a8d3f, 0 0 50px #2a8d3f !important;
 
 }
 
@@ -973,7 +972,6 @@ footer {
                 &:focus,
                 &:active {
               color: #afd5af;
-              text-shadow:0 0 10px #2a8d3f, 0 0 20px #2a8d3f, 0 0 30px #2a8d3f, 0 0 40px #2a8d3f, 0 0 50px #2a8d3f !important;
                 }
           }
       }
@@ -1041,7 +1039,7 @@ footer {
 
             h1 {
               font-size: clamp(29px, 3vw, 60px);
-              color: #70a370;
+              color: $dark-green;
               text-shadow:
                 0 0 6px rgba(175, 213, 175, 0.6),
                 0 0 12px rgba(175, 213, 175, 0.35);
@@ -1050,10 +1048,7 @@ footer {
 
             p {
               font-size: clamp(19px, 2vw, 40px);
-              color: #afd5af;
-              text-shadow:
-                0 0 6px rgba(175, 213, 175, 0.6),
-                0 0 12px rgba(175, 213, 175, 0.35);
+              color: #ffffff;
               pointer-events: none;
             }
 
@@ -1111,11 +1106,14 @@ footer {
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
       
   
      h1 {
        font-size: clamp(25px, 3vw, 50px);
+       animation: text-appear both;
+       animation-timeline: view();
+       animation-range: entry 20% cover 100vh;
       }
 
       .cardybox {
@@ -1139,7 +1137,9 @@ footer {
              border-radius: 20px;
              background: #379647;
              background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(201 201 201) 26%, rgb(71, 202, 100) 27%, rgb(37, 97, 50) 100%);
-
+             animation: text-appear both;
+             animation-timeline: view();
+             animation-range: entry 20% cover 100vh;
 
             .line2 {
             width: 300px;
@@ -1149,11 +1149,13 @@ footer {
 
             h1 {
                font-size: 20px;
+               pointer-events: none;
             }
 
             p {
               color: rgba(255, 255, 255, 0.76);
               font-size: 18px;
+              pointer-events: none;
             }
 
             span {
@@ -1162,8 +1164,21 @@ footer {
                text-shadow:
                 0 0 6px rgba(175, 213, 175, 0.6),
                 0 0 12px rgba(175, 213, 175, 0.35);
+                pointer-events: none;
             }
 
+
+            @keyframes text-appear {
+              from {
+                opacity: 0;
+                transform: translateY(50px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+            
           }
 
           @media (max-width: 1440px) {
@@ -1178,5 +1193,3 @@ footer {
           }
       }
 }
-
-// add hovers on them tommorrow
