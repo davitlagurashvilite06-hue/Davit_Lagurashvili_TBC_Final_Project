@@ -53,6 +53,19 @@ $dark-green: darken($primary-green, 20%);
           }
     }
 
+    @keyframes line-grow {
+
+  from {
+    opacity: 1;
+    transform: translateY(50px) scaleX(0); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleX(1);
+  }
+
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1269,9 +1282,20 @@ footer {
             height: 2px;
             width: 100%;
             background-color: #104115;
+            animation: line-grow both;
+            animation-timeline: view();
+            animation-range: entry 20% cover 50vh;
           }
         }
         }
+// ამის გამო სქეილი დავაყენე სიგანის მაგივრად, რომ უფრო ლამაზად შემოსულიყო ხაზები ორივე მხარეს
+
+        .AUleft .AUinsideline {
+           transform-origin: right; 
+          }
+        .AUright .AUinsideline {
+           transform-origin: left; 
+          }
 
         .AUline {
           width:4px;
@@ -1309,6 +1333,9 @@ footer {
              }
              & .AUinsideline {
               background-color: #305c2aad !important;
+                animation: text-appear both !important;
+                animation-timeline: view() !important;
+                animation-range: entry 20% cover 40vh !important;
              }
              & p {
               font-size: 16px !important;

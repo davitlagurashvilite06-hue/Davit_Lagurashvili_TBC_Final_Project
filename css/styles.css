@@ -8,6 +8,16 @@
     transform: translateY(0);
   }
 }
+@keyframes line-grow {
+  from {
+    opacity: 1;
+    transform: translateY(50px) scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleX(1);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -1052,6 +1062,15 @@ footer .bottomtrust {
   height: 2px;
   width: 100%;
   background-color: #104115;
+  animation: line-grow both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 50vh;
+}
+.AUsection3 .AUdivider .AUleft .AUinsideline {
+  transform-origin: right;
+}
+.AUsection3 .AUdivider .AUright .AUinsideline {
+  transform-origin: left;
 }
 .AUsection3 .AUdivider .AUline {
   width: 4px;
@@ -1089,6 +1108,9 @@ footer .bottomtrust {
   }
   .AUsection3 .AUdivider .AUinsideline {
     background-color: rgba(48, 92, 42, 0.6784313725) !important;
+    animation: text-appear both !important;
+    animation-timeline: view() !important;
+    animation-range: entry 20% cover 40vh !important;
   }
   .AUsection3 .AUdivider p {
     font-size: 16px !important;
