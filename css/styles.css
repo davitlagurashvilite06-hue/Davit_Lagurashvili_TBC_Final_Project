@@ -1004,31 +1004,41 @@ footer .bottomtrust {
   flex-direction: column;
   align-items: center;
   font-family: "Arial GEO BoldItalic", sans-serif;
-  gap: 20px;
+  gap: 35px;
   margin-bottom: 20px;
   width: 100%;
+}
+.AUsection3 h1 {
+  font-size: clamp(23px, 3vw, 50px);
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50vh;
 }
 .AUsection3 .AUdivider {
   display: flex;
   width: min(1200px, 90%);
   justify-content: center;
-  align-items: stretch;
 }
 .AUsection3 .AUdivider .AUleft, .AUsection3 .AUdivider .AUright {
-  gap: 20px;
+  gap: 50px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
+  align-items: stretch;
 }
 .AUsection3 .AUdivider .AUleft .AUcard, .AUsection3 .AUdivider .AUright .AUcard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
 }
 .AUsection3 .AUdivider .AUleft .AUcard h1, .AUsection3 .AUdivider .AUright .AUcard h1 {
   animation: text-appear both;
   animation-timeline: view();
   animation-range: entry 10% cover 50vh;
+  color: rgba(3, 10, 3, 0.747);
+  font-size: clamp(15px, 2vw, 29px);
+  pointer-events: none;
 }
 .AUsection3 .AUdivider .AUleft .AUcard p, .AUsection3 .AUdivider .AUright .AUcard p {
   padding-right: 20px;
@@ -1036,22 +1046,59 @@ footer .bottomtrust {
   animation: text-appear both;
   animation-timeline: view();
   animation-range: entry 10% cover 50vh;
+  font-size: clamp(13px, 1.5vw, 25px);
 }
 .AUsection3 .AUdivider .AUleft .AUcard .AUinsideline, .AUsection3 .AUdivider .AUright .AUcard .AUinsideline {
   height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #104115;
 }
 .AUsection3 .AUdivider .AUline {
   width: 4px;
-  background-color: #000000;
+  background-color: #104115;
 }
 .AUsection3 .AUdivider .AUright {
-  padding-top: 40px;
+  padding-top: 60px;
 }
 .AUsection3 .AUdivider .AUright p {
   padding-right: 0;
   padding-left: 20px;
+}
+@media (max-width: 600px) {
+  .AUsection3 .AUdivider {
+    flex-wrap: wrap;
+  }
+  .AUsection3 .AUdivider .AUline {
+    display: none;
+  }
+  .AUsection3 .AUdivider .AUleft, .AUsection3 .AUdivider .AUright {
+    padding: 10px;
+    gap: 20px;
+  }
+  .AUsection3 .AUdivider .AUleft .AUcard, .AUsection3 .AUdivider .AUright .AUcard {
+    background-color: rgba(66, 128, 58, 0.6784313725);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 20px;
+    min-height: 300px;
+    max-width: 400px;
+    justify-content: space-evenly;
+    padding: 30px;
+    animation: text-appear both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 100vh;
+  }
+  .AUsection3 .AUdivider .AUinsideline {
+    background-color: rgba(48, 92, 42, 0.6784313725) !important;
+  }
+  .AUsection3 .AUdivider p {
+    font-size: 16px !important;
+    color: rgb(180, 236, 180) !important;
+    pointer-events: none !important;
+  }
+  .AUsection3 .AUdivider h1 {
+    font-size: 17px !important;
+    color: rgb(45, 58, 45) !important;
+  }
 }
 
 .Ssection1 {
