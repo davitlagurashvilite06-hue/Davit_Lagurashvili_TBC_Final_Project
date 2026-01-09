@@ -1,3 +1,13 @@
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -834,6 +844,7 @@ footer .bottomtrust {
 .AUsection1 {
   font-family: "Arial GEO BoldItalic", sans-serif;
   width: 100%;
+  background-color: rgba(123, 179, 123, 0.5098039216);
   background-image: url(/images/background-one.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -970,16 +981,6 @@ footer .bottomtrust {
   text-shadow: 0 0 6px rgba(175, 213, 175, 0.6), 0 0 12px rgba(175, 213, 175, 0.35);
   pointer-events: none;
 }
-@keyframes text-appear {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @media (max-width: 1440px) {
   .AUsection2 .cardybox {
     gap: 32px;
@@ -996,6 +997,61 @@ footer .bottomtrust {
     gap: 20px;
     padding: 0 2% 0 2%;
   }
+}
+
+.AUsection3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.AUsection3 .AUdivider {
+  display: flex;
+  width: min(1200px, 90%);
+  justify-content: center;
+  align-items: stretch;
+}
+.AUsection3 .AUdivider .AUleft, .AUsection3 .AUdivider .AUright {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+.AUsection3 .AUdivider .AUleft .AUcard, .AUsection3 .AUdivider .AUright .AUcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AUsection3 .AUdivider .AUleft .AUcard h1, .AUsection3 .AUdivider .AUright .AUcard h1 {
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50vh;
+}
+.AUsection3 .AUdivider .AUleft .AUcard p, .AUsection3 .AUdivider .AUright .AUcard p {
+  padding-right: 20px;
+  color: #0d3f18;
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50vh;
+}
+.AUsection3 .AUdivider .AUleft .AUcard .AUinsideline, .AUsection3 .AUdivider .AUright .AUcard .AUinsideline {
+  height: 2px;
+  width: 100%;
+  background-color: #000000;
+}
+.AUsection3 .AUdivider .AUline {
+  width: 4px;
+  background-color: #000000;
+}
+.AUsection3 .AUdivider .AUright {
+  padding-top: 40px;
+}
+.AUsection3 .AUdivider .AUright p {
+  padding-right: 0;
+  padding-left: 20px;
 }
 
 .Ssection1 {
