@@ -1629,26 +1629,22 @@ iframe {
           }
 
           & a {
-            width: 100%;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: center;
-            text-decoration: none !important;
-
-            button {
-            @include hover-lift;
             width: 90%;
-            height: 100%;
+            margin-bottom: 10px;
+            align-self: center;
+            text-decoration: none !important;
             cursor: pointer;
             border: none !important;
+            @include hover-lift;
             border-radius: 10px;
             color: rgb(12, 46, 12);
             background-color: rgb(129, 211, 108, 0.4);
 
-            &:active, &:focus, &:hover {
+            &:active, &:focus {
               border: none !important;
+              box-shadow: none !important;
             }
-            }
+            
           }
 
           & .card-footer {

@@ -1365,28 +1365,24 @@ footer .bottomtrust {
   font-size: clamp(14px, 1vw, 26px);
 }
 .Nsection1 .gappy .col .news-card a {
-  width: 100%;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  text-decoration: none !important;
-}
-.Nsection1 .gappy .col .news-card a button {
-  transition: all ease 0.4s;
   width: 90%;
-  height: 100%;
+  margin-bottom: 10px;
+  align-self: center;
+  text-decoration: none !important;
   cursor: pointer;
   border: none !important;
+  transition: all ease 0.4s;
   border-radius: 10px;
   color: rgb(12, 46, 12);
   background-color: rgba(129, 211, 108, 0.4);
 }
-.Nsection1 .gappy .col .news-card a button:hover {
+.Nsection1 .gappy .col .news-card a:hover {
   transform: translateY(-5px);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.Nsection1 .gappy .col .news-card a button:active, .Nsection1 .gappy .col .news-card a button:focus, .Nsection1 .gappy .col .news-card a button:hover {
+.Nsection1 .gappy .col .news-card a:active, .Nsection1 .gappy .col .news-card a:focus {
   border: none !important;
+  box-shadow: none !important;
 }
 .Nsection1 .gappy .col .news-card .card-footer {
   border-radius: 0 0 20px 20px;
