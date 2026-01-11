@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/alk-rounded-nusx-med/css/alk-rounded-nusx-med.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
@@ -47,52 +48,105 @@
     
     <section class="Nsection1">
 
-<div class="row row-cols-1 row-cols-md-3 g-4 gappy">
+<div class="row gappy">
   <div class="col">
-    <div class="card h-100 news-card">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card news-card">
+      <img src="images/nicefood.jpg" class="card-img-top" alt="nicefood">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">PurePontial საკვები! - ორგანიზმისა და რეცეპტორების გამბედნიერებელი</h5>
+        <p class="card-text collapse" id="text0">ეს მცენარეული საკვების ბლოგი მხოლოდ ვეგანებისთვის არ არის განკუთვნილი! აქ თქვენ ნახავთ რეცეპტებს, რომლებიც შექმნილია თქვენი ორგანიზმისთვის ნატურალური საკვებით გასამდიდრებლად, გემოს დაკარგვის გარეშე. გემოვნების რეცეპტორებს გამოცხობის გარეშე ბრაუნის ნაჭრებით თუ ვეგანური შავი ლობიოს ბურიტოებით დააკმაყოფილებთ, PurePotential-ს აქვს მარტივი რეცეპტები, რომლებიც გჭირდებათ სახლში ჯანსაღი და გემრიელი კერძების მოსამზადებლად.</p>
       </div>
+
+<!-- აი აქ მე გადავწყვიტე რომ ბუტსტრაპის მეოთხე ვერსიის ქოლაფსი href-ით გამეკეთებინა და არა target-ით, ვინაიდან a-თეგზე უკვე scss-ში სტილები გაწერილი მაქვს. -->
+
+<!-- კოდი აღებულია საიტიდან-https://getbootstrap.com/docs/4.0/components/collapse/ -->
+ 
+      <a
+  class="read-more-btn"
+  data-toggle="collapse"
+  href="#text0"
+  role="button"
+  aria-expanded="false"
+  aria-controls="text0"
+><button>წაიკითხეთ მეტი!</button></a>
+
+
       <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
+        <small class="text-body-secondary">ბოლოს განახლდა 3 წუთის წინ</small>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card h-100 news-card">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card news-card">
+      <img src="images/run.jpg" class="card-img-top" alt="running">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">ყოველდღიური 30 წუთიანი სირბილი - ფიზიკური გამძლეობის ამაღლება</h5>
+        <p class="card-text collapse" id="text1">ყოველდღიური სირბილი ძუნძულით - ეს უფრო მეტია, ვიდრე კალორიების დაწვა. ამის შესახებ გამოცემა Eat This, Not That-ისთვის დაწერილ სტატიაში ფიტნეს-ტრენერი ჯეროდ ნობი წერს.
+იგი აღნიშნავს, რომ ყოველდღიური სირბილი თქვენი გულსისხლძარღვთა სისტემისთვის, კუნთებისთვია და ფსიქიკური ჯანმრთელობისთვის სასწაულებს ახდენს.</p>
       </div>
+
+
+      <a
+  class="read-more-btn"
+  data-toggle="collapse"
+  href="#text1"
+  role="button"
+  aria-expanded="false"
+  aria-controls="text1"
+><button>წაიკითხეთ მეტი!</button></a>
+
+
       <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
+        <small class="text-body-secondary">ბოლოს განახლდა 15 წუთის წინ</small>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card h-100 news-card">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card news-card">
+      <img src="images/spiritual.jpg" class="card-img-top" alt="spirituallotus">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <h5 class="card-title">რა არის საკუთარ თავზე ზრუნვა? (Self care)</h5>
+        <p class="card-text collapse" id="text2">ეს არის ნებისმიერი საქმიანობა, რომელსაც განზრახ ვაკეთებთ, იმისთვის, რომ ვიზრუნოთ ჩვენს მენტალურ, ემოციურ და ფიზიკურ ჯანმრთელობაზე. ეს გვეხმარება განწყობის გაუმჯობესებასა და შფოთვის შემცირებაში. საკუთარ თავზე ზრუნვა ხშირად გულისხმობს ისეთი აქტივობების გაკეთებას, რასაც თავისუფლად ვაკეთებთ, არ გვჭირდება დიდი ძალდატანება და რის შემდეგაც არ გვაქვს ნეგატიური შეგრძნებები. </p>
       </div>
+
+      <a
+  class="read-more-btn"
+  data-toggle="collapse"
+  href="#text2"
+  role="button"
+  aria-expanded="false"
+  aria-controls="text2"
+><button>წაიკითხეთ მეტი!</button></a>
+
+
       <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
+        <small class="text-body-secondary">ბოლოს განახლდა 1 დღის წინ</small>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card h-100 news-card">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card news-card">
+      <img src="images/tech.jpg" class="card-img-top" alt="techaddiction">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">რამდენად სახიფათოა ტექნოლოგიაზე დამოკიდებულება?</h5>
+        <p class="card-text collapse" id="text3">როგორც ახალგაზრდები, ასევე ზრდასრულები არც ისე იშვიათად გრძნობენ მოთხოვნილებას მუდმივად „მიეჯაჭვონ“ სოციალურ მედიას და ინტერნეტს, მაგრამ ეს ხშირად იწვევს ხელიდან გაშვების შიშს და ახალგაზრდებში მიტოვების შიშს. ნევროლოგიურ ცვლილებებთან ერთად, რომლებიც ხდება ტვინში ონლაინ რეჟიმში ყოფნისას, ტექნოლოგიაზე დამოკიდებულება შეიძლება დაემატოს ქცევითი დამოკიდებულებების სიას.
+
+ტექნოლოგიაზე დამოკიდებულება მოიცავს დამოკიდებულებას ვიდეო თამაშებზე, სოციალურ ქსელებზე და ინტერნეტში სერფინგზე.</p>
       </div>
+
+
+      <a
+  class="read-more-btn"
+  data-toggle="collapse"
+  href="#text3"
+  role="button"
+  aria-expanded="false"
+  aria-controls="text3"
+><button>წაიკითხეთ მეტი!</button></a>
+
+
       <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
+        <small class="text-body-secondary">ბოლოს განახლდა 1 დღის წინ</small>
       </div>
     </div>
   </div>

@@ -1338,16 +1338,65 @@ footer .bottomtrust {
 .Nsection1 {
   margin-bottom: 20px;
   padding: 20px;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
 }
 .Nsection1 .gappy {
   gap: 20px !important;
+  border-radius: 20px;
 }
-.Nsection1 .news-card {
+.Nsection1 .gappy .col {
+  border-radius: 20px;
+}
+.Nsection1 .gappy .col .news-card {
   background-color: rgba(93, 184, 130, 0.2);
+  border-radius: 20px;
   border: none;
   transition: all 0.4s ease;
+  min-width: 300px !important;
 }
-.Nsection1 .news-card:hover {
+.Nsection1 .gappy .col .news-card img {
+  border-radius: 20px 20px 0 0;
+}
+.Nsection1 .gappy .col .news-card .card-body .card-title {
+  font-size: clamp(16px, 1.1vw, 29px);
+  line-height: 1.25;
+}
+.Nsection1 .gappy .col .news-card .card-body .card-text {
+  font-size: clamp(14px, 1vw, 26px);
+}
+.Nsection1 .gappy .col .news-card a {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none !important;
+}
+.Nsection1 .gappy .col .news-card a button {
+  transition: all ease 0.4s;
+  width: 90%;
+  height: 100%;
+  cursor: pointer;
+  border: none !important;
+  border-radius: 10px;
+  color: rgb(12, 46, 12);
+  background-color: rgba(129, 211, 108, 0.4);
+}
+.Nsection1 .gappy .col .news-card a button:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.Nsection1 .gappy .col .news-card a button:active, .Nsection1 .gappy .col .news-card a button:focus, .Nsection1 .gappy .col .news-card a button:hover {
+  border: none !important;
+}
+.Nsection1 .gappy .col .news-card .card-footer {
+  border-radius: 0 0 20px 20px;
+}
+.Nsection1 .gappy .col .news-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+  .Nsection1 {
+    padding: 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */

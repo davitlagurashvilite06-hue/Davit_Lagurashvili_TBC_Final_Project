@@ -1598,20 +1598,77 @@ iframe {
 .Nsection1 {
   margin-bottom: 20px;
   padding: 20px;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
   
   & .gappy {
     gap: 20px !important;
+    border-radius: 20px;
   
-  }
-  .news-card {
-  background-color: rgba(93, 184, 130, 0.2);
-  border: none;
-  transition: all 0.4s ease; 
+& .col {
+  border-radius: 20px;
+  
+          .news-card {
+          background-color: rgba(93, 184, 130, 0.2);
+          border-radius: 20px;
+          border: none;
+          transition: all 0.4s ease; 
+          min-width: 300px !important;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  }
+          & img {
+             border-radius: 20px 20px 0 0;
+          }
 
-}
+          & .card-body {
+            .card-title {
+                font-size: clamp(16px, 1.1vw, 29px);
+                line-height: 1.25;
+            }
+            .card-text {
+              font-size: clamp(14px, 1vw, 26px);
+            }
+          }
+
+          & a {
+            width: 100%;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            text-decoration: none !important;
+
+            button {
+            @include hover-lift;
+            width: 90%;
+            height: 100%;
+            cursor: pointer;
+            border: none !important;
+            border-radius: 10px;
+            color: rgb(12, 46, 12);
+            background-color: rgb(129, 211, 108, 0.4);
+
+            &:active, &:focus, &:hover {
+              border: none !important;
+            }
+            }
+          }
+
+          & .card-footer {
+            border-radius: 0 0 20px 20px;
+          }
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+          }
+
+        }
+
+      }
+  
+    }
+
+    @media (max-width: 600px) {
+      & {
+        padding: 10px;
+      }
+    }
 }
