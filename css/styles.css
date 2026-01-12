@@ -1283,6 +1283,10 @@ footer .bottomtrust {
   flex-direction: column;
   gap: 8px;
 }
+.contact-section .Cdiv .contact-form .input-group #subject {
+  text-decoration: none;
+  color: black;
+}
 .contact-section .Cdiv .contact-form .input-group label {
   font-family: "ALK Rounded Nusx Med", sans-serif;
   color: rgb(73.8481675393, 167.0104712042, 49.9895287958);
