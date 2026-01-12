@@ -1225,7 +1225,7 @@ footer .bottomtrust {
 }
 .contact-section .Cdiv iframe {
   width: 60%;
-  height: 720px;
+  height: -webkit-fill-available;
   border-radius: 30px;
 }
 .contact-section .Cdiv .contact-container {
@@ -1268,6 +1268,28 @@ footer .bottomtrust {
 }
 .contact-section .Cdiv .contact-form .social-section .socials i:hover {
   transform: scale(1.2);
+}
+.contact-section .Cdiv .contact-form .contact-info {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
+  font-size: clamp(12px, 1.67vw, 18px);
+  color: #333;
+}
+.contact-section .Cdiv .contact-form .contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.contact-section .Cdiv .contact-form .contact-info div i {
+  color: #5db882;
+  width: 20px;
+  text-align: center;
+}
+.contact-section .Cdiv .contact-form .contact-info div span {
+  font-family: "ALK Rounded Nusx Med", sans-serif;
 }
 .contact-section .Cdiv .contact-form .input-group {
   display: flex;

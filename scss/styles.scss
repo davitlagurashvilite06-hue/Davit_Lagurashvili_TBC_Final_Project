@@ -1883,9 +1883,11 @@ footer {
   gap: 20px;
   width: 100%;
 
+// აქ უკვე ახალი სიმაღლის დაყენების ალტერნატივა ვისწავლე და ძალიან გამომადგა...
+
 iframe {
   width: 60%;
-  height: 720px;
+  height: -webkit-fill-available; 
   border-radius: 30px;
 }
 
@@ -1973,6 +1975,32 @@ iframe {
     }
   }
 
+& .contact-info {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+    font-size: clamp(12px, 1.67vw, 18px);
+    color: #333;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+
+        i {
+            color: #5db882;
+            width: 20px;
+            text-align: center;
+        }
+
+        span {
+            font-family: "ALK Rounded Nusx Med", sans-serif;
+        }
+    }
+}
+
         .input-group {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -2054,6 +2082,8 @@ iframe {
     }
   }
 }
+
+
 
 // news page 
 
