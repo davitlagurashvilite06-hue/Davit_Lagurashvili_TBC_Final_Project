@@ -1534,6 +1534,10 @@ iframe {
             flex-direction: column;
             gap: 8px;
 
+            #subject {
+              text-decoration: none;
+            }
+
             label {
                 font-family: "ALK Rounded Nusx Med", sans-serif;
                 color: $dark-green;
@@ -1594,6 +1598,8 @@ iframe {
     }
   }
 }
+
+// news page 
 
 .Nsection1 {
   margin-bottom: 20px;
