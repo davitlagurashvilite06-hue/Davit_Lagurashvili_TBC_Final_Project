@@ -598,15 +598,6 @@ main {
   }
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(129, 211, 108);
-  border-radius: 10px;
-}
-
 .section6 {
   display: flex;
   width: 100%;
@@ -1399,4 +1390,13 @@ footer .bottomtrust {
   .Nsection1 {
     padding: 10px;
   }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(129, 211, 108);
+  border-radius: 10px;
 }/*# sourceMappingURL=styles.css.map */
